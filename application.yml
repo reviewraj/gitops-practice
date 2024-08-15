@@ -11,7 +11,7 @@ spec:
   source:
     repoURL: https://github.com/reviewraj/gitops-practice.git
     targetRevision: HEAD
-    path: ./path-to-application
+    path: ./
   destination:
     server: https://kubernetes.default.svc
     namespace: test
