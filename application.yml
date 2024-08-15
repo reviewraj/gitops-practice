@@ -5,13 +5,13 @@ metadata:
   namespace: argocd
   annotations:
     argocd-image-updater.argoproj.io/image-list: nagaraju7876482/nginx
-    argocd-image-updater.argoproj.io/my-web-app.update-strategy: latest
+    argocd-image-updater.argoproj.io/nginx.update-strategy: latest
 spec:
   project: default
   source:
     repoURL: https://github.com/reviewraj/gitops-practice.git
     targetRevision: HEAD
-    path: ./
+    path: ./path-to-application
   destination:
     server: https://kubernetes.default.svc
     namespace: test
