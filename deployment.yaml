@@ -2,6 +2,9 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nginx-deployment
+  annotations:
+    argocd-image-updater.argoproj.io/image-list: my-app=nagaraju7876482/nginx
+    argocd-image-updater.argoproj.io/your-docker-username.my-app.update-strategy: latest
   namespace: test
   labels:
     app: nginx
